@@ -1,6 +1,5 @@
-<table>
-  <tr>
-    <th>Name</th>
-    <th>Age</th>
-  </tr>
-</table>
+<thead>
+  <th>Name</th>
+  <th>Age</th>
+</thead>
+<app-user-detail *ngFor="let user of users" [user]="user"></app-user-detail>
