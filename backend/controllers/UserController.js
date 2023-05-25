@@ -5,10 +5,10 @@ connect()
   .then(() => {
     console.log('Connected to MongoDB');
   })
-  .catch(err => {
+  .catch((err) => {
     console.error('Error connecting to MongoDB:', err);
   });
-  
+
 function getUsers() {
   return User.find();
 }
