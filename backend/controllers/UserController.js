@@ -9,8 +9,11 @@ connect()
     console.error('Error connecting to MongoDB:', err);
   });
 
-function getUsers() {
-  return User.find();
+async function getUsers() {
+  return await User.find();
 }
 
-module.exports = { getUsers };
+async function deleteUser(id) {
+  return await User.deleteOne({ _id: id });
+}
+module.exports = { getUsers, deleteUser };

@@ -3,7 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
 import User from '../models/User';
 
-const API_USERS = 'http://localhost:3000/users';
+const API_USERS = 'http://localhost:3000/users/';
 
 @Injectable({
   providedIn: 'root'
@@ -14,12 +14,9 @@ export class UserService {
 
   getUsers(): Observable<User[]> {
     return this.http.get<User[]>(API_USERS);
-    // return this.http.get<any>(API_USERS).pipe(map((res: any[]) => {
-    //   return res.map(user => ({
-    //     id: user.id,
-    //     name: user.name,
-    //     age: user.age
-    //   }))
-    // }))
+  };
+
+  deleteUser(user: User): Observable<User> {
+    return this.http.delete<User>(API_USERS + user._id);
   };
 }

@@ -2,4 +2,4 @@
   <th>Name</th>
   <th>Age</th>
 </thead>
-<app-user-detail *ngFor="let user of users" [user]="user"></app-user-detail>
+<app-user-detail *ngFor="let user of users" [user]="user" (delete)="onDeleteHandler(user)"></app-user-detail>
