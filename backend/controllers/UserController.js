@@ -9,6 +9,10 @@ connect()
     console.error('Error connecting to MongoDB:', err);
   });
 
+async function createUser(user) {
+  return await User.create({ name: user.name, age: user.age });
+}
+
 async function getUsers() {
   return await User.find();
 }
@@ -16,4 +20,4 @@ async function getUsers() {
 async function deleteUser(id) {
   return await User.deleteOne({ _id: id });
 }
-module.exports = { getUsers, deleteUser };
+module.exports = { getUsers, createUser, deleteUser };

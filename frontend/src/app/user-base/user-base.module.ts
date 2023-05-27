@@ -4,14 +4,17 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
 import { UserService } from '../services/user.service';
 import { UserListComponent } from './user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { UserFormComponent } from './user-list/user-form/user-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  declarations: [UserDetailComponent, UserListComponent],
-  exports: [UserDetailComponent, UserListComponent],
+  declarations: [UserDetailComponent, UserListComponent, UserFormComponent],
+  exports: [UserDetailComponent, UserListComponent, UserFormComponent],
   providers: [UserService]
 })
 export class UserBaseModule { }

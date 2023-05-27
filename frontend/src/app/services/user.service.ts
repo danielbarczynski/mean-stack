@@ -16,6 +16,10 @@ export class UserService {
     return this.http.get<User[]>(API_USERS);
   };
 
+  createUser(user: User): Observable<User> {
+    return this.http.post<User>(API_USERS, user);
+  }
+
   deleteUser(user: User): Observable<User> {
     return this.http.delete<User>(API_USERS + user._id);
   };

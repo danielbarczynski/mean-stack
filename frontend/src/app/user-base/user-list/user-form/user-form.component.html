@@ -1,0 +1,11 @@
+<form action="POST">
+  <label for="">Name</label>
+  <br>
+  <input type="text" [(ngModel)]="user.name">
+  <br>
+  <label for="">Age</label>
+  <br>
+  <input type="text" [(ngModel)]="user.age">
+  <br>
+  <button type="submit" (click)="addUser(user)">Create</button>
+</form>

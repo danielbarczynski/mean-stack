@@ -18,7 +18,7 @@ export class UserDetailComponent implements OnInit {
   ngOnInit() {
   }
 
-  onDelete(user: User) {
+  onDelete(user: User): void{
     this.delete.emit(user);
   };
   
