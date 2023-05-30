@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { FormControl, FormGroup } from '@angular/forms';
 import User from 'src/app/models/User';
 
 @Component({
@@ -7,18 +8,22 @@ import User from 'src/app/models/User';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
-  @Input()
   user!: User;
+  addUserForm!: FormGroup;
 
   @Output()
-  create: EventEmitter<User> = new EventEmitter();
+  create: EventEmitter<any> = new EventEmitter();
 
   constructor() { }
 
   ngOnInit() {
+    this.addUserForm = new FormGroup({
+      name: new FormControl(''),
+      age: new FormControl('')
+    })
   }
   
-  addUser(user: User): void {
-    this.create.emit(user);
+  addUser(): void {
+    this.create.emit(this.addUserForm);
   }
 }

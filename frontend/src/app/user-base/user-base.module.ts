@@ -5,13 +5,14 @@ import { UserService } from '../services/user.service';
 import { UserListComponent } from './user-list/user-list.component';
 import { HttpClientModule } from '@angular/common/http';
 import { UserFormComponent } from './user-list/user-form/user-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
     CommonModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   declarations: [UserDetailComponent, UserListComponent, UserFormComponent],
   exports: [UserDetailComponent, UserListComponent, UserFormComponent],

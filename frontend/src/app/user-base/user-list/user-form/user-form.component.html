@@ -1,11 +1,11 @@
-<form action="POST">
+<form [formGroup]="addUserForm" (ngSubmit)="addUser()">
   <label for="">Name</label>
   <br>
-  <input type="text" [(ngModel)]="user.name">
+  <input type="text" formControlName="name">
   <br>
   <label for="">Age</label>
   <br>
-  <input type="text" [(ngModel)]="user.age">
+  <input type="text" formControlName="age">
   <br>
-  <button type="submit" (click)="addUser(user)">Create</button>
+  <button type="submit">Create</button>
 </form>
