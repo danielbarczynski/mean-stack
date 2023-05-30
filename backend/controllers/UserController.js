@@ -9,8 +9,12 @@ connect()
     console.error('Error connecting to MongoDB:', err);
   });
 
+// async function createUser(user) {
+//   return await User.create({ _id: user.id, name: user.name, age: user.age });
+// }
+
 async function createUser(user) {
-  return await User.create({ name: 'user.name', age: 11 });
+  return await User.create(user);
 }
 
 async function getUsers() {

@@ -8,7 +8,6 @@ import User from 'src/app/models/User';
   styleUrls: ['./user-form.component.css']
 })
 export class UserFormComponent implements OnInit {
-  user!: User;
   addUserForm!: FormGroup;
 
   @Output()
@@ -24,6 +23,6 @@ export class UserFormComponent implements OnInit {
   }
   
   addUser(): void {
-    this.create.emit(this.addUserForm);
+    this.create.emit(this.addUserForm.value);
   }
 }

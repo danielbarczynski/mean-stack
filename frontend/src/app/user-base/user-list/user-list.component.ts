@@ -18,10 +18,11 @@ export class UserListComponent implements OnInit {
     );
   };
 
-  onCreateHandler(user: User) {
+  onCreateHandler(user: any) {
     this.userService.createUser(user).subscribe();
-  }
+  };
+  
   onDeleteHandler(user: User) {
     this.userService.deleteUser(user).subscribe();
-  }
+  };
 }
