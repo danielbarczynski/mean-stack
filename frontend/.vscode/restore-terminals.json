@@ -1,0 +1,38 @@
+{
+  "terminals": [
+    {
+      "splitTerminals": [
+        {
+          "name": "server",
+          "commands": [
+            "cd ..",
+            "cd backend",
+            "npm run server"
+          ]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "database",
+          "commands": [
+            "cd ..",
+            "cd backend",
+            "npm run database"
+          ]
+        }
+      ]
+    },
+    {
+      "splitTerminals": [
+        {
+          "name": "ng serve",
+          "commands": [
+            "ng serve"
+          ]
+        }
+      ]
+    }
+  ]
+}
