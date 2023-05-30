@@ -10,7 +10,7 @@ connect()
   });
 
 async function createUser(user) {
-  return await User.create({ name: user.name, age: user.age });
+  return await User.create({ name: 'user.name', age: 11 });
 }
 
 async function getUsers() {

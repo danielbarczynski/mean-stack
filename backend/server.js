@@ -14,9 +14,9 @@ app.get('/users', (req, res) => {
   getUsers().then(data => res.send(data));
 });
 
-app.post('/users/create'), (rq, res) => {
-  const { user } = { name: req.params.name, age: req.params.age };
-  createUser(user);
+app.post('/users/'), (req, res) => {
+  const { id, name, age } = req.body;
+  createUser(id, name, age);
 }
 app.delete('/users/:id', (req, res) => {
   const id = req.params.id;
