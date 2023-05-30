@@ -19,9 +19,10 @@
     {
       "type": "chrome",
       "request": "launch",
-      "name": "Debug Frontend",
+      "name": "Debug",
       "url": "http://localhost:4200",
-      "webRoot": "${workspaceFolder}"
+      "webRoot": "${workspaceFolder}",
+      "runtimeArgs": ["--new-tab"]
     }
   ]
 }
